@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Baking App</string>
+
+    <string name="network_url" translatable="false">https://d17h27t6h515a5.cloudfront.net/topher/2017/May/59121517_baking/baking.json</string>
+    <string name="not_connected">You are not connected \n to the Internet </string>
+    <string name="toast_message_widget">Widget as been set</string>
+    <string name="set_widget">Set widget</string>
+    <string name="appwidget_text">Tap set widget from a recipe to set the ingredient list here </string>
+    <string name="error_message">Unable to connect \n Check your network and retry </string>
+    <string name="serves">serves</string>
+    <string name="previous">previous</string>
+    <string name="next">next</string>
+    <string name="steps_bar_title">Steps</string>
+    <string name="content_description_recipe_image">Recipe image</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="steps">Steps</string>
+    <string name="content_description_button_prev">Previous</string>
+    <string name="content_description_button_next">next</string>
+    <string name="content_description_step_exo_player_thumbnail">Step Exo Player Thumbnail</string>
+    <string name="content_description_application_logo">Application Logo</string>
+    <string name="widget_toast">Widget as been set</string>
+    <string name="appwidget_header"> Baking App </string>
+    <string name="add_widget">Add widget</string>
+
+
+</resources>
