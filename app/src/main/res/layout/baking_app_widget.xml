@@ -6,7 +6,6 @@
     android:padding="@dimen/widget_margin">
 
 
-
     <TextView
         android:id="@+id/appwidget_head_text"
         android:layout_width="match_parent"
@@ -32,8 +31,6 @@
         android:textSize="14sp"
         android:layout_margin="8dp"
         android:textStyle="bold|italic" />
-
-
 
 
 </RelativeLayout>

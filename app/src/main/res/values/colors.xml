@@ -3,16 +3,13 @@
     <color name="colorPrimary">#795548</color>
     <color name="colorPrimaryDark">#5D4037</color>
     <color name="colorPrimaryLight">#EFEBE9</color>
-    <color name="colorBackgroundWhite">#ffffff</color>
     <color name="colorAccent">#FFFF00</color>
-    <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="veryLightbrown">#795548</color>
     <color name="Lightbrown">#795548</color>
     <color name="primary_text_color">#424242</color>
     <color name="activity_background">#F5F5F5</color>
     <color name="fragment_background">#F5F5F5</color>
-    <color name="default_background">#F5F5F5</color>
     <color name="ingredient_background">#FFFFFF</color>
 
 </resources>

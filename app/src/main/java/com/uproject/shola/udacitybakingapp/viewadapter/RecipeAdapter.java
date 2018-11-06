@@ -6,9 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import com.uproject.shola.udacitybakingapp.ParseModel.ParseRecipe;
 import com.uproject.shola.udacitybakingapp.R;
+
 import java.util.ArrayList;
+
 import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,7 +35,8 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecyclerVi
     }
 
     @Override
-    public @NonNull RecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public @NonNull
+    RecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.mainview_item, parent, false);
         return new RecyclerViewHolder(v);
     }
@@ -55,9 +59,13 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecyclerVi
     }
 
     class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        @BindView(R.id.recipe_tv) TextView mRecipeTextView;
-        @BindView(R.id.serves_tv) TextView mServingsTextView;
-        @BindString(R.string.serves) String mServes;
+        @BindView(R.id.recipe_tv)
+        TextView mRecipeTextView;
+        @BindView(R.id.serves_tv)
+        TextView mServingsTextView;
+        @BindString(R.string.serves)
+        String mServes;
+
         RecyclerViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
@@ -66,10 +74,10 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecyclerVi
 
 
         void bind(int listIndex) {
-            ParseRecipe  recipe = mDataSource.get(listIndex) ;
+            ParseRecipe recipe = mDataSource.get(listIndex);
             mRecipeTextView.setText(recipe.getName());
             String servingCount = Integer.toString(recipe.getServings());
-            String servings = String.format ("%s %s",mServes, servingCount);
+            String servings = String.format("%s %s", mServes, servingCount);
             mServingsTextView.setText(servings);
         }
 

@@ -13,14 +13,18 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+
 import com.google.android.exoplayer2.C;
 import com.uproject.shola.udacitybakingapp.ParseModel.Step;
 import com.uproject.shola.udacitybakingapp.fragment.StepDetailFragment;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
 import static com.uproject.shola.udacitybakingapp.StoredData.INTENT_EXTRA_NAME_STEP_DETAILS_INDEX;
 import static com.uproject.shola.udacitybakingapp.StoredData.INTENT_EXTRA_NAME_STEP_DETAILS_STEP_LIST;
 import static com.uproject.shola.udacitybakingapp.StoredData.STEP_DETAILS_FRAGMENT_ARGUMENT;
@@ -35,7 +39,8 @@ public class StepDetailActivity extends AppCompatActivity {
     Button prevButton;
     @BindView(R.id.step_indicator)
     TextView stepIndicator;
-    @BindView(R.id.button_step_next) Button nextButton;
+    @BindView(R.id.button_step_next)
+    Button nextButton;
     @BindView(R.id.tools_step)
     View stepNavigationView;
 

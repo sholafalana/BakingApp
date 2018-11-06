@@ -20,7 +20,7 @@ public class NetworkSingleton {
     }
 
     public static synchronized NetworkSingleton getInstance(Context context) {
-        if(mInstance == null){
+        if (mInstance == null) {
             mInstance = new NetworkSingleton(context);
         }
 

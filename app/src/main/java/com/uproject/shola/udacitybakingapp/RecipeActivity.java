@@ -83,13 +83,14 @@ public class RecipeActivity extends AppCompatActivity implements RecipeAdapter.L
         mBakeRecyclerViewAdapter = new RecipeAdapter(mDataSource, this);
         mBakeRecyclerView.setHasFixedSize(true);
         mBakeRecyclerView.setAdapter(mBakeRecyclerViewAdapter);
-        if(isConnected()){
+        if (isConnected()) {
             applyIdlingConfiguration();
             fetchRecipeData();
 
-        }else{
+        } else {
             mErrorTextView.setVisibility(View.VISIBLE);
-            mErrorTextView.setText(mNoNetwork);}
+            mErrorTextView.setText(mNoNetwork);
+        }
     }
 
     private void fetchRecipeData() {
@@ -138,22 +139,24 @@ public class RecipeActivity extends AppCompatActivity implements RecipeAdapter.L
     }
 
     protected boolean isConnected() {
-        ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
-        if(connectivityManager!=null){
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivityManager != null) {
             NetworkInfo netInfo = connectivityManager.getActiveNetworkInfo();
-            return  (netInfo != null && netInfo.isConnectedOrConnecting()) ;}
+            return (netInfo != null && netInfo.isConnectedOrConnecting());
+        }
         return true;
     }
 
     @Override
     public void onListItemClick(ParseRecipe recipe) {
 
-            Intent detailIntent = new Intent(this, RecipeDetailedActivity.class);
-            detailIntent.putExtra(INTENT_EXTRA_NAME_RECIPE_DETAILS, recipe);
-            startActivity(detailIntent);
-        
+        Intent detailIntent = new Intent(this, RecipeDetailedActivity.class);
+        detailIntent.putExtra(INTENT_EXTRA_NAME_RECIPE_DETAILS, recipe);
+        startActivity(detailIntent);
+
 
     }
+
     @VisibleForTesting
     @NonNull
     public IdlingResource getIdlingResource() {

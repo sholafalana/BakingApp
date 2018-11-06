@@ -39,9 +39,9 @@ public class RecipeDetailedActivity extends AppCompatActivity implements RecipeD
 
     @BindString(R.string.toast_message_widget)
     String mWidgetToastString;
+    public CharSequence toastString = "Widget has been set";
     private String mRecipeName;
     private ArrayList<IngredientsItem> mIngredients;
-
 
 
     private static final String SAVED_STEP_SELECTED_INDEX_KEY = "saved_step_selected_index";
@@ -114,6 +114,7 @@ public class RecipeDetailedActivity extends AppCompatActivity implements RecipeD
         intent.putExtra(INTENT_EXTRA_NAME_STEP_DETAILS_INDEX, index);
         startActivity(intent);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.widget_menu, menu);
@@ -135,9 +136,9 @@ public class RecipeDetailedActivity extends AppCompatActivity implements RecipeD
     }
 
 
-    private void createWidget(){
+    private void createWidget() {
 
-        String  ingredientsList ="";
+        String ingredientsList = "";
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < mIngredients.size(); i++) {
             IngredientsItem ingredient = mIngredients.get(i);
@@ -155,7 +156,7 @@ public class RecipeDetailedActivity extends AppCompatActivity implements RecipeD
         remoteViews.setTextViewText(R.id.appwidget_head_text, mRecipeName);
         remoteViews.setTextViewText(R.id.appwidget_text, ingredientsList);
         appWidgetManager.updateAppWidget(thisWidget, remoteViews);
-        Toast.makeText(this, mWidgetToastString,
+        Toast.makeText(this, toastString,
                 Toast.LENGTH_LONG).show();
     }
 
